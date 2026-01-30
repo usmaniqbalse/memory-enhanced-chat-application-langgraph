@@ -22,25 +22,6 @@ A powerful chat application with **long-term memory** capabilities, built using 
 
 <img src="assets/chat-memory.png" alt="Chatbot " />
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  🧠 Memory Chat                    │  🧠 Memory-Enhanced Chat   │
-│  Powered by Llama 3.2              │  Powered by Llama 3.2...   │
-│  ─────────────────                 │                            │
-│  ➕ New Chat                       │  ┌─────────────────────┐   │
-│  ─────────────────                 │  │ Hi! I'm learning    │   │
-│  💬 Chat History                   │  │ Python programming  │   │
-│  📍 Learning Python...             │  └─────────────────────┘   │
-│  💭 Explain AI concepts...         │  ┌─────────────────────┐   │
-│  💭 Previous chat...               │  │ Great! Since you're │   │
-│  ─────────────────                 │  │ learning Python...  │   │
-│  🧠 Stored Memories                │  └─────────────────────┘   │
-│  ─────────────────                 │                            │
-│  📊 Stats                          │  [Type your message...] 🚀 │
-│  Conversations: 5  Memories: 8     │                            │
-└─────────────────────────────────────────────────────────────────┘
-```
-
 ## 🏗️ Project Structure
 
 ```
