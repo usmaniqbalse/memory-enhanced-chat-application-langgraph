@@ -20,6 +20,8 @@ A powerful chat application with **long-term memory** capabilities, built using 
 
 ## 📸 Screenshots
 
+<img src="assets/chat-memory.png" alt="Chatbot " />
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  🧠 Memory Chat                    │  🧠 Memory-Enhanced Chat   │
@@ -85,17 +87,24 @@ memory-enhanced-chat-application-langgraph/
    ```
 
 2. **Install Ollama and pull the model**
+   - Windows (PowerShell):
 
-   ```bash
-   # Install Ollama (Linux)
-   curl -fsSL https://ollama.ai/install.sh | sh
+     ```powershell
+     winget install Ollama.Ollama
+     # Pull the model (server usually auto-starts as a background service)
+     ollama pull llama3.2:3b
+     # Optional: start the server only if it isn't already running
+     # ollama serve
+     ```
 
-   # Pull the Llama 3.2 model
-   ollama pull llama3.2:3b
+   - Linux:
 
-   # Start Ollama server (if not running)
-   ollama serve
-   ```
+     ```bash
+     curl -fsSL https://ollama.ai/install.sh | sh
+     ollama pull llama3.2:3b
+     # Start Ollama server (if not running)
+     ollama serve
+     ```
 
 3. **Start PostgreSQL with Docker**
 
@@ -250,6 +259,42 @@ ollama serve
 # Check if the model is available
 ollama list
 ```
+
+**1b. "listen tcp 127.0.0.1:11434: bind: Only one usage of each socket address is permitted" (Windows)**
+
+This means Ollama is already running and listening on port 11434. You don't need to start another server.
+
+- Verify the service is up and list models:
+
+  ```powershell
+  ollama list
+  ```
+
+- If you really need to restart it, find and stop the process, then start it again:
+
+  ```powershell
+  # Find which PID is using the port
+  netstat -aon | findstr :11434
+
+  # View the process
+  tasklist /FI "PID eq <PID_FROM_ABOVE>"
+
+  # Stop it (choose one)
+  Stop-Process -Id <PID_FROM_ABOVE> -Force
+  # or
+  taskkill /PID <PID_FROM_ABOVE> /F
+
+  # Start Ollama again if desired
+  ollama serve
+  ```
+
+- To run Ollama on a different port (PowerShell):
+
+  ```powershell
+  $env:OLLAMA_HOST = "127.0.0.1:11435"; ollama serve
+  ```
+
+Then set `OLLAMA_BASE_URL=http://localhost:11435` in your environment.
 
 **2. "Database connection failed"**
 
