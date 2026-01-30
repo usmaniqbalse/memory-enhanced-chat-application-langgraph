@@ -42,7 +42,7 @@ A powerful chat application with **long-term memory** capabilities, built using 
 ## 🏗️ Project Structure
 
 ```
-memory-in-llms/
+memory-enhanced-chat-application-langgraph/
 ├── app.py                    # Main Streamlit application
 ├── src/
 │   ├── __init__.py
@@ -80,8 +80,8 @@ memory-in-llms/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/usmaniqbalse/memory-in-llms.git
-   cd memory-in-llms
+   git clone https://github.com/usmaniqbalse/memory-enhanced-chat-application-langgraph.git
+   cd memory-enhanced-chat-application-langgraph
    ```
 
 2. **Install Ollama and pull the model**
@@ -133,8 +133,8 @@ Run everything in Docker (PostgreSQL, Ollama, and the app):
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/usmaniqbalse/memory-in-llms.git
-   cd memory-in-llms
+   git clone https://github.com/usmaniqbalse/memory-enhanced-chat-application-langgraph.git
+   cd memory-enhanced-chat-application-langgraph
    ```
 
 2. **Start all services**
