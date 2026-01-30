@@ -1,4 +1,4 @@
-# 🧠 Memory-Enhanced Chat Application
+# 🧠 Memory-Enhanced Chat Application built using LangGraph
 
 A powerful chat application with **long-term memory** capabilities, built using **LangGraph**, **Ollama (Llama 3.2:3b)**, and **PostgreSQL**. The application remembers user preferences, personal details, and conversation context across sessions.
 
